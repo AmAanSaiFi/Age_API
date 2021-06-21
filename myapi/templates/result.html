@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="result">
+    <div class="container my-4">
+
+        <hr>
+        
+        <div class="border border-light p-3 mb-4">
+
+        {% if age %}
+        <p class="font-weight-bold">You were born on : {{date}} / {{month}} / {{year}}</p>
+        <br>
+        <div class="text-center">
+          <p class="h5">Your age is {{age}}.</p>
+        </div>
+        {% else %}
+        <div class="text-center">
+          <p class="h5">You must have entered invalid information.
+          </p>
+          <p class="h6">NOTE: Please use correct month information with their corresponding dates.
+            Also Don't leave the fields blank.
+          </p>
+          
+          <p>Go back using home button.</p>
+        </div>
+        {% endif %}
+          <!-- <div class="text-center">
+            <p class="h5">Your age is {{age}}.</p>
+          </div> -->
+        
+        </div>
+    
+      </div>
+</section>
+
+{% endblock %}
+

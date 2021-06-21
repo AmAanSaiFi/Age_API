@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head >
+
+	<title>Hello</title>
+	
+	<meta charset="utf-8" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body>
+	<div class="container">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4">
+		<h1> <span>W</span>hat's Your Age ?</h1>
+		<br>
+		<br>
+			<form name = "inputform" action="{% url 'result' %}"  method="POST">
+			{% csrf_token %}
+			<!-- {{ form|crispy }} -->
+			{% bootstrap_form form %}
+			<!-- {{ form.as_p }} -->
+			<br>
+			<button type="submit" class="btn btn-success">
+				Submit
+			</button>
+			<!-- <input type="Submit" name="submit" value="Submit"/> -->
+			</form>
+
+			
+		</div>
+	</div>
+</div>
+
+</body>
+
+</html>
+{% endblock %}
