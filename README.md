@@ -1,5 +1,5 @@
 # Age_API
-A simple django project which outputs API.
+A simple django project which outputs API for age data which was just calculated for the user.
 
 A django project which intakes day, month and year as three integer values and returns the age of the person. This also provides API of the said data.
 
